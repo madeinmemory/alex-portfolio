@@ -1,0 +1,288 @@
+/* =========================
+   Imports
+========================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap");
+
+/* =========================
+   Page Basics
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #08080c;
+  background-image: url("site-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: "Trebuchet MS", serif;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+main {
+  flex: 1;
+}
+
+/* =========================
+   Header / Navigation
+========================= */
+header {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+h1 {
+  font-size: 48px;
+  text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #b38cff;
+  text-shadow: 0 0 12px rgba(179, 140, 255, 0.8);
+}
+
+/* =========================
+   Main Sections
+========================= */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+div {
+  background-color: #15151f;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #9c9ca5;
+}
+
+/* =========================
+   Links
+========================= */
+section a {
+  color: #b38cff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section a:hover {
+  text-shadow: 0 0 12px rgba(179, 140, 255, 0.8);
+  color: white;
+}
+
+/* =========================
+   Buttons
+========================= */
+button {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(179, 140, 255, 0.7);
+}
+
+/* =========================
+   Special Text
+========================= */
+.issues {
+  color: red;
+  font-size: 24px;
+}
+
+#statusText {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #aa9cc7;
+}
+
+#title {
+  font-family: "Cinzel", serif;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #15151f;
+  margin-top: 50px;
+  border: 1px solid #000000;
+}
+/* =========================
+   Special Sections
+========================= */
+.hidden {
+  display: none;
+}
+
+#updateBox {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #2a2a3d;
+  border: 1px solid #9c9ca5;
+}
+
+.contact-detail {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.contact-detail:first-of-type {
+  margin-top: 40px;
+}
+
+/* =========================
+   Socials
+========================= */
+
+.social-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  border: 1px solid #9c9ca5;
+}
+
+.social-card {
+  background-color: #15151f;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 1px solid #9c9ca5;
+}
+
+.social-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(179, 140, 255, 0.7);
+  color: #b38cff;
+}
+
+/* =========================
+   Page Card CSS
+========================= */
+
+.page-card {
+  background-color: #15151f;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   Fan Art Page
+========================= */
+
+.fanart-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.fanart-card {
+  background-color: #15151f;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  flex: 1;
+  text-align: center;
+}
+
+/* =========================
+   Feedback Page
+========================= */
+
+.feedback-form {
+  background-color: #15151f;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  background-color: #08080c;
+  color: white;
+  border: 1px solid rgba (255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: "Trebuchet MS", serif;
+}
+
+.feedback-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#feedbackStatus {
+  margin-top: 15px;
+  color: #aa9cc7;
+}
+
+/* =========================
+   Status Page
+========================= */
+
+.status-card {
+  margin-bottom: 20px;
+}
+
+.operational {
+  border-color: rgba(90, 255, 160, 0.6);
+}
+
+.unreleased {
+  border-color: rgba(255, 255, 255, 0.2);
+}
